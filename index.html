@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sertifikat</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container sertifikat my-5">
+  <div class="row justify-content-center mb-2">
+      <button type="button" class="btn btn-primary mb-4" id="btn-download">Download</button>
+      <div class="card-wrapper">
+        <div class="card rotate-card" id="certificate-card">
+          <div class="front card-body">
+            <img src="./laman depan.png" class="img-fluid" alt="...">
+            <h2 class="name-sertifikat text-center">Abdul Rohim</h2>
+            <div id="qrcode"></div>
+          </div>
+          <div class="back card-body">
+            <img src="./laman belakang.png" class="img-fluid" alt="...">
+            <table class="table table-bordered table-hover table-light data-sertifikat">
+              <thead>
+                <tr>
+                  <th>
+                    No
+                  </th>
+                  <th>
+                    Job Desk
+                  </th>
+                  <th>
+                    Nilai
+                  </th>
+                </tr>
+              
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    1
+                  </td>
+                  <td>
+                    Menampilkan Video dan Profil Pengisi Acara (Master of Ceremony, Opening Speech, Speaker, dan Moderator) pada kegiatan sesuai rundown
+                  </td>
+                  <td>
+                    100
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    2
+                  </td>
+                  <td>
+                    Menangani hal teknis di zoom selama meeting berlansung
+                  </td>
+                  <td>
+                    90
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">Total</th>
+                  <th>95</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
