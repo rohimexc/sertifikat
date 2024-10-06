@@ -177,7 +177,7 @@
         margin: [0, 0, 0, 0], // Menghapus margin
         filename: 'certificate.pdf',
         image: { type: 'jpeg', quality: 1.0 },
-        html2canvas: { scale: 1, useCORS: true },
+        html2canvas: { scale: 2, useCORS: true },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' }
     }).toPdf().get('pdf').then(function (pdf) {
         // Tangkap halaman kedua (back) dan tambahkan ke PDF

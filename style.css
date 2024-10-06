@@ -207,3 +207,10 @@ img.ttd-nurdin{
   }
 }
 
+/* Media Query untuk ponsel */
+@media (max-width: 768px) {
+  .front, .back {
+      width: 100%; /* Menyesuaikan lebar layar ponsel */
+      height: auto;
+  }
+}
