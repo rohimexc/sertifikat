@@ -1,84 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sertifikat</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikat Penghargaan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container sertifikat my-5">
-  <div class="row justify-content-center mb-2">
-      <button type="button" class="btn btn-primary mb-4" id="btn-download">Download</button>
-      <div class="card-wrapper">
-        <div class="card rotate-card" id="certificate-card">
-          <div class="front card-body">
-            <img src="./laman depan.png" class="img-fluid" alt="...">
-            <h2 class="name-sertifikat text-center">Abdul Rohim</h2>
-            <div id="qrcode"></div>
-          </div>
-          <div class="back card-body">
-            <img src="./laman belakang.png" class="img-fluid" alt="...">
-            <table class="table table-bordered table-hover table-light data-sertifikat">
-              <thead>
-                <tr>
-                  <th>
-                    No
-                  </th>
-                  <th>
-                    Job Desk
-                  </th>
-                  <th>
-                    Nilai
-                  </th>
-                </tr>
-              
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    1
-                  </td>
-                  <td>
-                    Menampilkan Video dan Profil Pengisi Acara (Master of Ceremony, Opening Speech, Speaker, dan Moderator) pada kegiatan sesuai rundown
-                  </td>
-                  <td>
-                    100
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    2
-                  </td>
-                  <td>
-                    Menangani hal teknis di zoom selama meeting berlansung
-                  </td>
-                  <td>
-                    90
-                  </td>
-                </tr>
-                <tr>
-                  <th colspan="2">Total</th>
-                  <th>95</th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    <div class="container sertifikat my-5">
+        <div class="row justify-content-center mb-2">
+            <button type="button" class="btn btn-primary mb-4 text-center" id="btn-download">Download</button>
+            <div class="card-wrapper">
+              <div class="rotate-card" id="certificate-card">
+                <div class="front card-body">
+                    <div id="qrcode"></div>
+                    <img src="./logo.png" class="header" alt="...">
+                    <img src="./elemen/1.png" class="elemen-atas" alt="...">
+                    <img src="./elemen/2.png" class="elemen-bawah" alt="...">
+                    <h1 class="text-center">SERTIFIKAT</h1>
+                    <h2 class="text-center">PENGHARGAAN</h2>
+                    <h5 class="nomor text-center">Nomor : 26/PP.HKI/X/2024</h5>
+                    <h5 class="diberikan text-center">Diberikan kepada</h5>
+                    <h2 class="name-sertifikat text-center">Abdul Rohim</h2>
+                    <h5 class="sebagai text-center">sebagai</h5>
+                    <h2 class="jabatan-sertifikat text-center">Event Organizer</h2>
+            
+                    <div class="details">
+                        Pada Webinar Nasional HKI: Pengembangan Aktivitas Guru Kimia Penggerak yang diselenggarakan oleh Himpunan Kimia Indonesia selama 3 hari
+                        pada tanggal 1, 3, dan 5 Oktober 2024 dengan kinerja yang <strong>Sangat Baik</strong>
+                    </div>
+                
+                    <div class="tanggal">Palu, 05 Oktober 2024</div>
+                
+                    <table class="table table-hover table-light signature-table">
+                      <thead class="align-middle">
+                          <tr>
+                              <th>Ketua HKI Pusat</th>
+                              <th>Kepala Bidang<br>Pengembangan dan Pembinaan SDM HKI</th>
+                          </tr>
+                      </thead>
+                      <tbody class="align-middle">
+                          <tr>
+                              <td>Prof. Dr. Ir. Muhammad Nurdin, M.Sc., IPU., ASEAN Eng.</td>
+                              <td>Prof. Drs. Anang Wahid M Diah, M.Si., Ph.D</td>
+                          </tr>
+                          <tr>
+                              <td><img src="./ttd prof nurdin.png" class="ttd-nurdin rounded mx-auto d-block" alt="..."></td>
+                              <td><img src="./ttd prof anang.png" class="ttd-anang rounded mx-auto d-block" alt="..."></td>
+                          </tr>
+                          <tr>
+                              <td>NIP. 196606061994031006</td>
+                              <td>NIP. 196909101996031003</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                    
+                    
+                </div>
+                <div class="back card-body">
+
+                    <img src="./logo.png" class="header" alt="...">
+                    <img src="./elemen/1.png" class="elemen-atas" alt="...">
+                    <img src="./elemen/2.png" class="elemen-bawah" alt="...">
+                
+                    <h1 class="text-center">SERTIFIKAT</h1>
+                    <h2 class="text-center">PENGHARGAAN</h2>
+                    <h5 class="nomor text-center">Nomor : 26/PP.HKI/X/2024</h5>
+
+                    <table class="table table-striped table-hover data-sertifikat">
+                      <thead>
+                              <tr>
+                                <th>
+                                  No
+                                </th>
+                                <th>
+                                  Job Desk
+                                </th>
+                                <th>
+                                  Nilai
+                                </th>
+                              </tr>
+                            
+                      </thead>
+                      <tbody>
+                              <tr>
+                                <td>
+                                  1
+                                </td>
+                                <td>
+                                  Menampilkan Video dan Profil Pengisi Acara (Master of Ceremony, Opening Speech, Speaker, dan Moderator) pada kegiatan sesuai rundown
+                                </td>
+                                <td>
+                                  100
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  2
+                                </td>
+                                <td>
+                                  Menangani hal teknis di zoom selama meeting berlansung
+                                </td>
+                                <td>
+                                  90
+                                </td>
+                              </tr>
+                              <tr>
+                                <th colspan="2">Total</th>
+                                <th>95</th>
+                              </tr>
+                          </tbody>
+                      </table>
+                      <table class="table table-hover table-light signature-table">
+                        <thead class="align-middle">
+                            <tr>
+                                <th>Ketua HKI Pusat</th>
+                                <th>Kepala Bidang<br>Pengembangan dan Pembinaan SDM HKI</th>
+                            </tr>
+                        </thead>
+                        <tbody class="align-middle">
+                            <tr>
+                                <td>Prof. Dr. Ir. Muhammad Nurdin, M.Sc., IPU., ASEAN Eng.</td>
+                                <td>Prof. Drs. Anang Wahid M Diah, M.Si., Ph.D</td>
+                            </tr>
+                            <tr>
+                                <td><img src="./ttd prof nurdin.png" class="ttd-nurdin rounded mx-auto d-block" alt="..."></td>
+                                <td><img src="./ttd prof anang.png" class="ttd-anang rounded mx-auto d-block" alt="..."></td>
+                            </tr>
+                            <tr>
+                                <td>NIP. 196606061994031006</td>
+                                <td>NIP. 196909101996031003</td>
+                            </tr>
+                        </tbody>
+                      </table>
+
+                </div>
+              </div>
+            </div>
         </div>
-      </div>
-  </div>
-</div>
+    </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
-
-
 <script src="script.js"></script>
+
+<script>
+  document.getElementById('btn-download').addEventListener('click', function () {
+    var frontElement = document.querySelector('.front');
+    var backElement = document.querySelector('.back');
+
+    // Simpan style asli
+    var originalFrontStyle = frontElement.style.cssText;
+    var originalBackStyle = backElement.style.cssText;
+    var originalBackTransform = backElement.style.transform; // Simpan transformasi asli
+
+    // Hapus properti `position: absolute`, `backface-visibility`, dan transformasi pada halaman belakang
+    frontElement.style.position = 'static';
+    frontElement.style.backfaceVisibility = 'visible';
+    backElement.style.position = 'static';
+    backElement.style.backfaceVisibility = 'visible';
+    backElement.style.transform = 'none'; // Hapus transformasi sementara
+
+    // Buat PDF untuk halaman pertama (front)
+    html2pdf().from(frontElement).set({
+        margin: [0, 0, 0, 0], // Menghapus margin
+        filename: 'certificate.pdf',
+        image: { type: 'jpeg', quality: 1.0 },
+        html2canvas: { scale: 1, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' }
+    }).toPdf().get('pdf').then(function (pdf) {
+        // Tangkap halaman kedua (back) dan tambahkan ke PDF
+        return html2canvas(backElement, { scale: 1, useCORS: true }).then(function (canvas) {
+            var imgData = canvas.toDataURL('image/jpeg');
+            // Tambahkan halaman baru dan gambar dari halaman kedua
+            pdf.addPage();
+            pdf.addImage(imgData, 'JPEG', 0, 0, 297, 210); // A4 ukuran landscape (297x210 mm)
+            return pdf;
+        });
+    }).then(function (pdf) {
+        // Simpan PDF setelah kedua halaman selesai
+        pdf.save('certificate.pdf');
+    }).catch(function (error) {
+        console.error("Terjadi kesalahan saat membuat PDF:", error);
+    }).finally(function () {
+        // Kembalikan style asli setelah selesai
+        frontElement.style.cssText = originalFrontStyle;
+        backElement.style.cssText = originalBackStyle;
+        backElement.style.transform = originalBackTransform; // Kembalikan transformasi asli
+    });
+});
+
+</script>
 
 </body>
 </html>

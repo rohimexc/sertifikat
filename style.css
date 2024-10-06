@@ -1,91 +1,209 @@
+.body{
+  font-family: 'Poppins', sans-serif;
+}
+.card-wrapper {
+  perspective: 1000px; 
+}
 
+.rotate-card {
+  width: 89.1vw; /* Sesuaikan ukuran kartu */
+  height: 63vw;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2s cubic-bezier(0.7, -.5, 0.3, 1.8);
+  text-align: center;
+  box-shadow: 8px 8px 15px #a3a3a3, -8px -8px 15px #ffffff; 
+  margin: 0.5vw;
+}
 
-  .card-wrapper {
-    perspective: 1000px; 
-  }
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
 
+.front {
+  background-color: white;
+}
+
+.back {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+
+.rotate-card:hover {
+  transform: rotateY(180deg);
+}
+
+/* Button Download */
+#btn-download {
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+/* Styling Gambar */
+img.header {
+  width: 25vw;
+  display: block;
+  margin: 0 auto;
+}
+
+img.elemen-atas, img.elemen-bawah {
+  width: 10vw;
+  position: absolute;
+  z-index: 0;
+}
+
+img.elemen-atas {
+  width: 20vw;
+  top: 0;
+  left: 0;
+}
+
+img.elemen-bawah {
+  right: 0;
+  bottom: 0;
+}
+
+/* Text Centering */
+h1, h2, h5 {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4vw;
+  font-family: 'Arimo', sans-serif;
+}
+
+h2 {
+  font-size: 2.1vw;
+  font-family: 'Arimo', sans-serif;
+}
+
+h5 {
+  font-size: 1.3vw;
+}
+
+/* Specific Margins for Certain Text */
+
+.diberikan {
+  margin-top: 1rem;
+}
+
+.name-sertifikat {
+  margin-top: 1rem;
+  font-size: 2.2vw;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
+}
+
+.sebagai {
+  margin-top: 1rem;
+}
+
+.jabatan-sertifikat {
+  margin-top: 1rem;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
+}
+
+/* Certificate Details */
+.details {
+  font-size: 1.3vw;
+  margin-top: 1rem;
+  padding: 0 0.2rem;
+  text-align: center;
+}
+
+/* Date Position */
+.tanggal {
+  font-size: 1.3vw;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Signature Table */
+.signature-table {
+  margin-top: 0.5rem;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+.signature-table th,.signature-table td{
+  font-size: 1.3vw;
+  padding: 0;
+  margin: 0;
   
-  .rotate-card {
-    width: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 1.5s cubic-bezier(0.7, -.5, 0.3, 1.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+}
 
-  }
-  .rotate-card img .img-fluid {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
+img.ttd-anang{
+  height: 8vw;
+}
 
-  .name-sertifikat{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 27.5%;
-    text-align: center;
-    z-index: 2;
-    font-size: 2.5vw; /* Responsif berdasarkan lebar viewport */
-    width: 80%; /* Sesuaikan lebar teks terhadap gambar */
-    color: #333;
-  }
+img.ttd-nurdin{
+  height:8vw;
+}
 
-  .data-sertifikat{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 35%;
-    text-align: center;
-    z-index: 2;
-    width: 80%; /* Sesuaikan lebar teks terhadap gambar */
-    color: #333;
-    font-size: 1.2vw; 
-  }
+/* QR Code Styling */
+#qrcode {
+  margin-top: 1rem;
+  z-index: 3;
+  position: absolute;
+  right: 4vw;
+  top:18.5vw;
+}
 
-  .card #qrcode{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(230%, 200%);
-    z-index: 2;
-    width: 12%;
-  }
+#qrcode img{
+  width: 8vw;
+}
 
-  #qrcode img{
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  
+/* Back Card Table */
+.data-sertifikat {
+  font-size: 1.3vw;
+  width: 70vw;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #333;
+  z-index: 5;
+}
 
-
-
- 
+.data-sertifikat th, .data-sertifikat td{
+  line-height: 1;
+  padding: 0.4rem;
+}
+/* CSS khusus untuk PDF */
+@media print {
   .front, .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-
-
+    width: 297mm; /* A4 landscape width */
+    height: 210mm; /* A4 landscape height */
+    position: relative;
+    backface-visibility: visible;
+    transform: rotateY(180deg);
+    margin: 0;
+    padding: 0;
+    page-break-after: always; /* Memaksa halaman baru setelah elemen front */
   }
-  
-  .front {
-    background-color: white;
-  }
-  
+
   .back {
-    background-color: white;
-    transform: rotateY(180deg);
+    page-break-before: always; /* Pastikan back muncul di halaman kedua */
   }
-  
-  .rotate-card:hover {
-    transform: rotateY(180deg);
+
+  .body {
+    margin: 0;
+    padding: 0;
   }
-  
+
+  #btn-download {
+    visibility: hidden; /* Sembunyikan tombol download saat dicetak */
+  }
+}
+

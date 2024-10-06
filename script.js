@@ -127,13 +127,4 @@ document.querySelector('.rotate-card').addEventListener('click', function() {
       }
       
 
-      document.getElementById('btn-download').addEventListener('click', function () {
-        var element = document.getElementById('certificate-card');
-        html2pdf().from(element).set({
-            margin: 1,
-            filename: 'certificate.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
-        }).save();
-    });
+      
