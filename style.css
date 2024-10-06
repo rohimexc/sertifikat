@@ -114,7 +114,7 @@ h5 {
 .details {
   font-size: 1.3vw;
   margin-top: 1.2vh;
-  padding: 0 0.2rem;
+  padding: 0 1vh;
   text-align: center;
 }
 
@@ -127,7 +127,7 @@ h5 {
 
 /* Signature Table */
 .signature-table {
-  margin-top: 0.5rem;
+  margin-top: 0.6vh;
   width: 100%;
   text-align: center;
   line-height: 1.5;
