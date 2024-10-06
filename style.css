@@ -90,22 +90,22 @@ h5 {
 /* Specific Margins for Certain Text */
 
 .diberikan {
-  margin-top: 1rem;
+  margin-top: 1.2vh;
 }
 
 .name-sertifikat {
-  margin-top: 1rem;
+  margin-top: 1.2vh;
   font-size: 2.2vw;
   font-family: 'Arimo', sans-serif;
   font-weight: 700;
 }
 
 .sebagai {
-  margin-top: 1rem;
+  margin-top: 1.2vh;
 }
 
 .jabatan-sertifikat {
-  margin-top: 1rem;
+  margin-top: 1.2vh;
   font-family: 'Arimo', sans-serif;
   font-weight: 700;
 }
@@ -113,7 +113,7 @@ h5 {
 /* Certificate Details */
 .details {
   font-size: 1.3vw;
-  margin-top: 1rem;
+  margin-top: 1.2vh;
   padding: 0 0.2rem;
   text-align: center;
 }
@@ -121,7 +121,7 @@ h5 {
 /* Date Position */
 .tanggal {
   font-size: 1.3vw;
-  margin-top: 1rem;
+  margin-top: 1.2vh;
   text-align: center;
 }
 
@@ -153,7 +153,7 @@ img.ttd-nurdin{
 
 /* QR Code Styling */
 #qrcode {
-  margin-top: 1rem;
+  margin-top: 1.2vh;
   z-index: 3;
   position: absolute;
   right: 4vw;
