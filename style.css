@@ -1,19 +1,22 @@
-.body{
+.body {
   font-family: 'Poppins', sans-serif;
 }
+
 .card-wrapper {
-  perspective: 1000px; 
+  perspective: 1000px;
 }
 
 .rotate-card {
-  width: 89.1vw; /* Sesuaikan ukuran kartu */
-  height: 63vw;
+  width: 29.7cm; /* Ukuran A4 dalam cm */
+  height: 21cm; /* Ukuran A4 dalam cm */
   position: relative;
   transform-style: preserve-3d;
   transition: transform 2s cubic-bezier(0.7, -.5, 0.3, 1.8);
   text-align: center;
-  box-shadow: 8px 8px 15px #a3a3a3, -8px -8px 15px #ffffff; 
+  box-shadow: 8px 8px 15px #a3a3a3, -8px -8px 15px #ffffff;
   margin: 0.5vw;
+  max-width: 100%;
+  max-height: 100vh;   
 }
 
 .front, .back {
@@ -21,6 +24,7 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  overflow: hidden;
 }
 
 .front {
@@ -45,26 +49,26 @@
 
 /* Styling Gambar */
 img.header {
-  width: 25vw;
+  width: 10cm; /* 25vw ke cm */
   display: block;
   margin: 0 auto;
 }
 
 img.elemen-atas, img.elemen-bawah {
-  width: 10vw;
+  width: 7cm; /* 10vw ke cm */
   position: absolute;
   z-index: 0;
 }
 
 img.elemen-atas {
-  width: 20vw;
   top: 0;
   left: 0;
 }
 
 img.elemen-bawah {
+  top: 0;
   right: 0;
-  bottom: 0;
+  transform: rotateY(180deg);
 }
 
 /* Text Centering */
@@ -74,60 +78,41 @@ h1, h2, h5 {
 }
 
 h1 {
-  font-size: 4vw;
+  font-size: 40pt; /* 4vw ke pt (1cm = 28.35pt) */
   font-family: 'Arimo', sans-serif;
 }
 
 h2 {
-  font-size: 2.1vw;
+  font-size: 22pt; /* 2.1vw ke pt */
   font-family: 'Arimo', sans-serif;
 }
 
 h5 {
-  font-size: 1.3vw;
+  font-size: 15pt; /* 1.3vw ke pt */
 }
 
 /* Specific Margins for Certain Text */
-
-.diberikan {
-  margin-top: 1.2vh;
+.diberikan, .name-sertifikat, .sebagai, .jabatan-sertifikat {
+  margin-top: 0.5cm;
 }
 
 .name-sertifikat {
-  margin-top: 1.2vh;
-  font-size: 2.2vw;
-  font-family: 'Arimo', sans-serif;
-  font-weight: 700;
-}
-
-.sebagai {
-  margin-top: 1.2vh;
-}
-
-.jabatan-sertifikat {
-  margin-top: 1.2vh;
+  font-size: 25pt; /* 2.2vw ke pt */
   font-family: 'Arimo', sans-serif;
   font-weight: 700;
 }
 
 /* Certificate Details */
-.details {
-  font-size: 1.3vw;
-  margin-top: 1.2vh;
-  padding: 0 1vh;
-  text-align: center;
-}
-
-/* Date Position */
-.tanggal {
-  font-size: 1.3vw;
-  margin-top: 1.2vh;
+.details, .tanggal {
+  font-size: 15pt; /* 1.3vw ke pt */
+  margin-top: 0.5cm;
+  padding: 0 1cm;
   text-align: center;
 }
 
 /* Signature Table */
 .signature-table {
-  margin-top: 0.6vh;
+  margin-top: 0.2cm;
   width: 100%;
   text-align: center;
   line-height: 1.5;
@@ -136,38 +121,33 @@ h5 {
   z-index: 2;
 }
 
-.signature-table th,.signature-table td{
-  font-size: 1.3vw;
+.signature-table th, .signature-table td {
+  font-size: 15pt; /* 1.3vw ke pt */
   padding: 0;
   margin: 0;
-  
 }
 
-img.ttd-anang{
-  height: 8vw;
-}
-
-img.ttd-nurdin{
-  height:8vw;
+img.ttd-anang, img.ttd-nurdin {
+  height: 2.54cm; /* 8vw ke cm */
 }
 
 /* QR Code Styling */
 #qrcode {
-  margin-top: 1.2vh;
   z-index: 3;
   position: absolute;
-  right: 4vw;
-  top:18.5vw;
+  right: 3cm; /* Anda dapat mengonversi ini ke cm juga jika diinginkan */
+  top: 3cm; /* Anda dapat mengonversi ini ke cm juga jika diinginkan */
 }
 
-#qrcode img{
-  width: 8vw;
+#qrcode img {
+  width: 3cm;
+
 }
 
 /* Back Card Table */
 .data-sertifikat {
-  font-size: 1.3vw;
-  width: 70vw;
+  font-size: 15pt; /* 1.3vw ke pt */
+  width: 26cm; /* 70vw ke cm */
   margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
@@ -176,25 +156,26 @@ img.ttd-nurdin{
   z-index: 5;
 }
 
-.data-sertifikat th, .data-sertifikat td{
+.data-sertifikat th, .data-sertifikat td {
   line-height: 1;
   padding: 0.4rem;
 }
+
 /* CSS khusus untuk PDF */
 @media print {
   .front, .back {
-    width: 297mm; /* A4 landscape width */
-    height: 210mm; /* A4 landscape height */
+    width: 29.7cm; /* A4 landscape width */
+    height: 21cm; /* A4 landscape height */
     position: relative;
     backface-visibility: visible;
     transform: rotateY(180deg);
     margin: 0;
     padding: 0;
-    page-break-after: always; /* Memaksa halaman baru setelah elemen front */
+    page-break-after: always;
   }
 
   .back {
-    page-break-before: always; /* Pastikan back muncul di halaman kedua */
+    page-break-before: always;
   }
 
   .body {
@@ -203,14 +184,7 @@ img.ttd-nurdin{
   }
 
   #btn-download {
-    visibility: hidden; /* Sembunyikan tombol download saat dicetak */
+    visibility: hidden;
   }
 }
 
-/* Media Query untuk ponsel */
-@media (max-width: 768px) {
-  .front, .back {
-      width: 100%; /* Menyesuaikan lebar layar ponsel */
-      height: auto;
-  }
-}

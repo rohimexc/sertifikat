@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024"> 
     <title>Sertifikat Penghargaan</title>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,6 @@
                     <div id="qrcode"></div>
                     <img src="./logo.png" class="header" alt="...">
                     <img src="./elemen/1.png" class="elemen-atas" alt="...">
-                    <img src="./elemen/2.png" class="elemen-bawah" alt="...">
                     <h1 class="text-center">SERTIFIKAT</h1>
                     <h2 class="text-center">PENGHARGAAN</h2>
                     <h5 class="nomor text-center">Nomor : 26/PP.HKI/X/2024</h5>
@@ -66,7 +65,6 @@
 
                     <img src="./logo.png" class="header" alt="...">
                     <img src="./elemen/1.png" class="elemen-atas" alt="...">
-                    <img src="./elemen/2.png" class="elemen-bawah" alt="...">
                 
                     <h1 class="text-center">SERTIFIKAT</h1>
                     <h2 class="text-center">PENGHARGAAN</h2>
@@ -177,7 +175,7 @@
         margin: [0, 0, 0, 0], // Menghapus margin
         filename: 'certificate.pdf',
         image: { type: 'jpeg', quality: 1.0 },
-        html2canvas: { scale: 2, useCORS: true },
+        html2canvas: { scale: 1, useCORS: true },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' }
     }).toPdf().get('pdf').then(function (pdf) {
         // Tangkap halaman kedua (back) dan tambahkan ke PDF
