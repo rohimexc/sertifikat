@@ -1,6 +1,14 @@
 document.querySelector('.rotate-card').addEventListener('click', function() {
     this.classList.toggle('rotate');
   });
+  const linkElement = document.getElementById("linkSertifikat");
+
+  // Mendapatkan URL aktif saat ini
+  const currentUrl = window.location.href;
+
+  // Menetapkan URL sebagai teks dan href dari link
+  linkElement.href = currentUrl;
+  linkElement.textContent = currentUrl;
 
 
     // const spreadsheetId = '15vJQlKGQOvFRv0A_SniNIuTXvomNYxzuYk2bN7NJzuc';
@@ -55,9 +63,8 @@ document.querySelector('.rotate-card').addEventListener('click', function() {
     // })
     // .catch(error => console.error('Error fetching data: ', error));
 
-
-    const spreadsheetId = '15vJQlKGQOvFRv0A_SniNIuTXvomNYxzuYk2bN7NJzuc';
-    const range = 'Sheet1!A2:D';
+    const spreadsheetId = '1PU79lG9ayzPMaVvFsbNWevgE8vViInBGGNEzgNiRBOY';
+    const range = 'Sheet4!A2:Z';
     const apiKey = 'AIzaSyBv9Ny9JnFxu6YMU5UYpAFqzrreApzwYEU'; // Gantilah dengan API Key Anda
     
     // Ambil ID dari URL (misal: 'P-HKI-24-1-001')
@@ -69,7 +76,7 @@ document.querySelector('.rotate-card').addEventListener('click', function() {
       .then(data => {
         const rows = data.values;
         let tableContent = '';
-        let totalNilai = 0;
+        let totalNilai = 0.00;
         let jumlahJobDesk = 0;
     
         // Filter data berdasarkan ID dari URL
@@ -79,7 +86,7 @@ document.querySelector('.rotate-card').addEventListener('click', function() {
         if (filteredRows.length > 0) {
           const namaLengkap = filteredRows[0][1]; // Ambil nama dari kolom Nama Lengkap
           document.querySelector('.name-sertifikat').innerText = namaLengkap; // Tampilkan nama pada HTML
-    
+          
           filteredRows.forEach((row, index) => {
             const nilai = parseFloat(row[3]); // Ambil nilai dari kolom Nilai
             totalNilai += nilai; // Tambahkan nilai ke total
@@ -89,21 +96,41 @@ document.querySelector('.rotate-card').addEventListener('click', function() {
               <tr>
                 <td>${index + 1}</td>
                 <td>${row[2]}</td>
-                <td>${nilai}</td>
+                <td>${row[4]}</td>
               </tr>
             `;
           });
     
           // Hitung rata-rata nilai
           const rataRata = (totalNilai / jumlahJobDesk).toFixed(2);
-    
+          let predikat;
+          if (rataRata >= 85.01) {
+            predikat = "A";
+          } else if (rataRata >= 80.01) {
+            predikat = "A-";
+          } else if (rataRata >= 75.01) {
+            predikat = "B+";
+          } else if (rataRata >= 70.01) {
+            predikat = "B";
+          } else if (rataRata >= 65.01) {
+            predikat = "B-";
+          } else if (rataRata >= 50.01) {
+            predikat = "C";
+          } else if (rataRata >= 45.01) {
+            predikat = "D";
+          } else {
+            predikat = "E";
+          }
           // Tambahkan baris untuk rata-rata di akhir tabel
+          
           tableContent += `
             <tr>
-              <th colspan="2">Rata-rata</th>
-              <th>${rataRata}</th>
+              <th colspan="2">Predikat</th>
+              <th>${predikat}</th>
             </tr>
           `;
+          // Update elemen predikat di HTML
+          document.getElementById("predikat").innerText = predikat;
         } else {
           tableContent = '<tr><td colspan="3">Data tidak ditemukan</td></tr>';
         }

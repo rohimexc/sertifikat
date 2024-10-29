@@ -122,14 +122,20 @@ h5 {
 }
 
 .signature-table th, .signature-table td {
-  font-size: 15pt; /* 1.3vw ke pt */
+  font-size: 15pt;
   padding: 0;
   margin: 0;
+  text-align: center; /* Horizontal center alignment */
+  vertical-align: middle;
 }
 
-img.ttd-anang, img.ttd-nurdin {
+img.ttd-cap {
   height: 2.54cm; /* 8vw ke cm */
 }
+img.ttd {
+  height: 1.9cm; /* 8vw ke cm */
+}
+
 
 /* QR Code Styling */
 #qrcode {
@@ -160,7 +166,9 @@ img.ttd-anang, img.ttd-nurdin {
   line-height: 1;
   padding: 0.4rem;
 }
-
+.empty-row td {
+  color: transparent; /* Menyembunyikan teks */
+}
 /* CSS khusus untuk PDF */
 @media print {
   .front, .back {
@@ -187,4 +195,18 @@ img.ttd-anang, img.ttd-nurdin {
     visibility: hidden;
   }
 }
+
+.watermark-background::before {
+  content: "DUTA KAMPUS MERDEKA UNIVERSITAS TADULAKO";
+  display: block;
+  position: absolute;
+  left: 50px;
+  top:250px;
+  color: rgba(0, 0, 0, 0.015);
+  transform: rotate(-3deg);
+  white-space: wrap;
+  line-height: 90px;
+  font-size: 90px;
+}
+
 

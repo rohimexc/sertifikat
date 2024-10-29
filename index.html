@@ -11,64 +11,76 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    
     <div class="container sertifikat my-5">
+        
         <div class="row justify-content-center mb-2">
             <button type="button" class="btn btn-primary mb-4 text-center" id="btn-download">Download</button>
             <div class="card-wrapper">
               <div class="rotate-card" id="certificate-card">
                 <div class="front card-body">
+                    <div class="watermark-background">
+                    </div>
                     <div id="qrcode"></div>
                     <img src="./logo.png" class="header" alt="...">
                     <img src="./elemen/1.png" class="elemen-atas" alt="...">
                     <h1 class="text-center">SERTIFIKAT</h1>
-                    <h2 class="text-center">PENGHARGAAN</h2>
-                    <h5 class="nomor text-center">Nomor : 26/PP.HKI/X/2024</h5>
+                    <h5 class="nomor text-center">Nomor : 2702/UN28.16/GT.02.06/2024</h5>
                     <h5 class="diberikan text-center">Diberikan kepada</h5>
                     <h2 class="name-sertifikat text-center">Abdul Rohim</h2>
                     <h5 class="sebagai text-center">sebagai</h5>
-                    <h2 class="jabatan-sertifikat text-center">Event Organizer</h2>
+                    <h2 class="jabatan-sertifikat text-center">Peserta</h2>
             
                     <div class="details">
-                        Pada Webinar Nasional HKI: Pengembangan Aktivitas Guru Kimia Penggerak yang diselenggarakan oleh Himpunan Kimia Indonesia selama 3 hari
-                        pada tanggal 1, 3, dan 5 Oktober 2024 dengan kinerja yang <strong>Sangat Baik</strong>
+                        Pelatihan <em>Master of Ceremony</em> yang dilaksanakan  oleh Duta Kampus Merdeka Universitas Tadulako selama 20 JP
+                        pada bulan September 2024 dengan predikat kelulusan <strong id="predikat">A</strong>
                     </div>
                 
-                    <div class="tanggal">Palu, 05 Oktober 2024</div>
+                    <div class="tanggal">Palu, 28 Oktober 2024</div>
                 
                     <table class="table table-hover table-light signature-table">
                       <thead class="align-middle">
                           <tr>
-                              <th>Ketua HKI Pusat</th>
-                              <th>Kepala Bidang<br>Pengembangan dan Pembinaan SDM HKI</th>
+                              <th>Kepala LPPM</th>
+                              <th>Kepala Pusat MBKM</th>
+                              <th>Ketua DKM 2024</th>
+                              <th>Ketua Instruktur</th>
                           </tr>
                       </thead>
                       <tbody class="align-middle">
                           <tr>
-                              <td>Prof. Dr. Ir. Muhammad Nurdin, M.Sc., IPU., ASEAN Eng.</td>
+                              <td>Dr. Lukman, M.Hum.</td>
                               <td>Prof. Drs. Anang Wahid M Diah, M.Si., Ph.D</td>
+                              <td>Imam Fauzi</td>
+                              <td>Inggrid Widyasari Legarano</td>
                           </tr>
                           <tr>
-                              <td><img src="./ttd prof nurdin.png" class="ttd-nurdin rounded mx-auto d-block" alt="..."></td>
-                              <td><img src="./ttd prof anang.png" class="ttd-anang rounded mx-auto d-block" alt="..."></td>
+                              <td><img src="./ttd lukman+cap.png" class="ttd-cap rounded mx-auto d-block" alt="..."></td>
+                              <td><img src="./ttd prof anang.png" class="ttd rounded mx-auto d-block" alt="..."></td>
+                              <td><img src="./imam.png" class="ttd rounded mx-auto d-block" alt="..."></td>
+                              <td><img src="./inggrid.png" class="ttd rounded mx-auto d-block" alt="..."></td>
+                              
                           </tr>
                           <tr>
-                              <td>NIP. 196606061994031006</td>
+                              <td>NIP. 196606211992031004</td>
                               <td>NIP. 196909101996031003</td>
+                              <td>NIM. F52121027</td>
+                              <td>NIM. C30120085</td>
                           </tr>
+                          <tr class="empty-row"><td colspan="4">-</td></tr>
+                          <tr><td class="text-left" colspan="4"><a id="linkSertifikat" href="http://127.0.0.1:5500/index.html?id=PMC-01-DKM-UT-02-016">http://127.0.0.1:5500/index.html?id=PMC-01-DKM-UT-02-016</a></td></tr>
                       </tbody>
                     </table>
                     
                     
                 </div>
                 <div class="back card-body">
-
                     <img src="./logo.png" class="header" alt="...">
                     <img src="./elemen/1.png" class="elemen-atas" alt="...">
                 
+                    <h2 class="nomor text-center">Lampiran</h2>
                     <h1 class="text-center">SERTIFIKAT</h1>
-                    <h2 class="text-center">PENGHARGAAN</h2>
-                    <h5 class="nomor text-center">Nomor : 26/PP.HKI/X/2024</h5>
+                    <h5 class="nomor text-center">Nomor : 2702/UN28.16/GT.02.06/2024</h5>
 
                     <table class="table table-striped table-hover data-sertifikat">
                       <thead>
@@ -77,10 +89,10 @@
                                   No
                                 </th>
                                 <th>
-                                  Job Desk
+                                  Sub Kompetensi
                                 </th>
                                 <th>
-                                  Nilai
+                                  Nilai Huruf
                                 </th>
                               </tr>
                             
@@ -117,23 +129,35 @@
                       <table class="table table-hover table-light signature-table">
                         <thead class="align-middle">
                             <tr>
-                                <th>Ketua HKI Pusat</th>
-                                <th>Kepala Bidang<br>Pengembangan dan Pembinaan SDM HKI</th>
+                                <th>Kepala LPPM</th>
+                                <th>Kepala Pusat MBKM</th>
+                                <th>Ketua DKM 2024</th>
+                                <th>Ketua Instruktur</th>
                             </tr>
                         </thead>
                         <tbody class="align-middle">
                             <tr>
-                                <td>Prof. Dr. Ir. Muhammad Nurdin, M.Sc., IPU., ASEAN Eng.</td>
+                                <td>Dr. Lukman, M.Hum.</td>
                                 <td>Prof. Drs. Anang Wahid M Diah, M.Si., Ph.D</td>
+                                <td>Imam Fauzi</td>
+                                <td>Inggrid Widyasari Legarano</td>
                             </tr>
                             <tr>
-                                <td><img src="./ttd prof nurdin.png" class="ttd-nurdin rounded mx-auto d-block" alt="..."></td>
-                                <td><img src="./ttd prof anang.png" class="ttd-anang rounded mx-auto d-block" alt="..."></td>
+                                <td><img src="./ttd lukman+cap.png" class="ttd-cap rounded mx-auto d-block" alt="..."></td>
+                                <td><img src="./ttd prof anang.png" class="ttd rounded mx-auto d-block" alt="..."></td>
+                                <td><img src="./imam.png" class="ttd rounded mx-auto d-block" alt="..."></td>
+                                <td><img src="./inggrid.png" class="ttd rounded mx-auto d-block" alt="..."></td>
+                                
                             </tr>
                             <tr>
-                                <td>NIP. 196606061994031006</td>
+                                <td>NIP. 196606211992031004</td>
                                 <td>NIP. 196909101996031003</td>
+                                <td>NIM. F52121027</td>
+                                <td>NIM. C30120085</td>
                             </tr>
+                            <tr class="empty-row"><td colspan="4">-</td></tr>
+                            <tr class="empty-row"><td colspan="4">-</td></tr>
+                            <tr><td class="text-left" colspan="4"><a id="linkSertifikat" href="http://127.0.0.1:5500/index.html?id=PMC-01-DKM-UT-02-016">http://127.0.0.1:5500/index.html?id=PMC-01-DKM-UT-02-016</a></td></tr>
                         </tbody>
                       </table>
 
