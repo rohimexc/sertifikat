@@ -6,12 +6,13 @@ document.querySelector('.rotate-card').addEventListener('click', function() {
 
   // Mendapatkan URL aktif saat ini
   const currentUrl = window.location.href;
+  const currentUrl2 = window.location.href;
 
   // Menetapkan URL sebagai teks dan href dari link
   linkElement.href = currentUrl;
   linkElement.textContent = currentUrl;
-  linkElement2.href = currentUrl;
-  linkElement2.textContent = currentUrl;
+  linkElement2.href = currentUrl2;
+  linkElement2.textContent = currentUrl2;
 
 
     // const spreadsheetId = '15vJQlKGQOvFRv0A_SniNIuTXvomNYxzuYk2bN7NJzuc';
